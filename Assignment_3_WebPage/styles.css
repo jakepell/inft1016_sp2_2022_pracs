@@ -1,0 +1,75 @@
+:root{
+
+    --base-font-color:        #839496;
+    --secondary-font-color:    #586E75; 
+    --emphasised-font:         #93A1A1;
+
+    --c-background-color:      #002B36;
+    --c-background-highlights: #073642;
+
+    --c-yellow:      #B58900;
+    --c-orange:     #CB4B16; 
+    --c-red:        #DC322F; 
+    --c-magenta:     #D33682;
+    --c-violet:      #6C71C4; 
+    --c-blue:        #268BD2; 
+    --c-cyan:        #2AA198;
+    --c-green:      #859900; 
+    --primary-color: rgb(255, 255, 255);
+}
+
+script {
+    --primary-color: rgb(0, 0, 0);
+}
+ 
+
+body {  
+    background-color:      var(--primary-color); 
+
+  }
+
+header, footer {
+
+    background-color: var(--c-blue);
+
+}
+
+main, footer, header{
+
+    color: black; 
+}
+
+a:link{
+
+    color: var(--c-blue);
+
+}
+
+a:hover{
+    color: var(--c-orange);
+}
+
+header{
+
+    text-align: center;
+    color: black;
+    font-size: 150%;
+
+}
+
+nav{
+    text-align: center;
+}
+
+.container{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1, h2{
+
+    padding-top: px;
+}
+
