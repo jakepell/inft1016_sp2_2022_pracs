@@ -5,7 +5,12 @@
     <script>
         counter = 0;
 
+        function mouseover(){
+            onmouseover = "http://www.outgrabe.net/cat01.jpg";
+        }
+
         function countClicks(element) {
+
     counter = counter + 1;
     var output = 'The link was pressed ' + counter + ' times.';
     element.innerHTML = output;
@@ -15,7 +20,10 @@
 </head>
 <body>
     <h1>JavaScript Demo</h1>
+    <img src="http://www.outgrabe.net/cat01.jpg" />
+    
     <a href="#" onclick="countClicks(this);">Click me</a>
+    <a href="http://www.outgrabe.net/cat01.jpg" onmouseover = "http://www.outgrabe.net/cat01.jpg">
     <p id="boxy"></p>
 </body>
 </html>
