@@ -16,7 +16,7 @@
   <body>
 
     <div>
-        <button onclick="darkMode()">Darkmode</button>
+        <button id="icon" onclick="darkMode()">Darkmode</button>
     </div>
 
     <header>
@@ -87,5 +87,15 @@
       <p>©Copyright 2022 by Jacob B-P. All rights reversed.</p>
     </footer>
 
+  <script>
+
+
+    var icon = document.getElementById('icon')
+
+    icon.onclick = function dark_mode(dark){
+      document.body.classList.toggle('dark-theme');
+    }
+
+  </script>
   </body>
 </html>

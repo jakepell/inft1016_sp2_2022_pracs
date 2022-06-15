@@ -15,11 +15,19 @@
     --c-blue:        #268BD2; 
     --c-cyan:        #2AA198;
     --c-green:      #859900; 
-    --primary-color: rgb(255, 255, 255);
+    --primary-color: #edf2fc;
+    --secondary-color: #212121;
+}
+
+
+.dark-theme{
+
+    --primary-color: #212121;
+    --secondary-color: #edf2fc;
 }
 
 script {
-    --primary-color: rgb(0, 0, 0);
+    color: var(--secondary-color);
 }
  
 
@@ -27,6 +35,12 @@ body {
     background-color:      var(--primary-color); 
 
   }
+
+article {
+
+    color: var(--secondary-color);
+
+}
 
 header, footer {
 
@@ -36,7 +50,7 @@ header, footer {
 
 main, footer, header{
 
-    color: black; 
+    color: var(--secondary-color); 
 }
 
 a:link{
@@ -57,7 +71,8 @@ header{
 
 }
 
-nav{
+input{
+    background: var(--primary-color);
     text-align: center;
 }
 
