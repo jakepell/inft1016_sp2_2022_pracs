@@ -12,17 +12,24 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
     <![endif]-->
   </head>
+  
 
   <body>
 
     <div>
-        <button id="icon" onclick="darkMode()">Darkmode</button>
+        <button id="icon" onclick="dark_Mode()">Darkmode</button>
     </div>
 
     <header>
+
         <h1> Artificial Intelligence</h1>
         <h1>Neuromorphic Computing</h1>
+        <h2 style = "display: inline-block"> Hello, </h2> 
+        <h2 style = "display: inline-block" id="name"></h2>
+       
+
     </header>
+
 
     <nav class="container">
         <a href="#">Home</a>
@@ -54,6 +61,7 @@
 
         <p>Donec ut librero sed accu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor.</p>
 
+        
         <p>Pelientesque auctor nisi id magna consequat sagittis. Curabitur dapibus, enim sit amet elit pharetra tincidunt feugiat nist imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros.</p>
 
       </article>
@@ -84,7 +92,7 @@
     <!-- And here is our main footer that is used across all the pages of our website -->
 
     <footer>
-      <p>©Copyright 2022 by Jacob B-P. All rights reversed.</p>
+      <p>©Copyright 2022 by Jacob Borthwick-Pellissier. All rights reversed.</p>
     </footer>
 
   <script>
@@ -96,6 +104,17 @@
       document.body.classList.toggle('dark-theme');
     }
 
+    window.onload = function getName()
+      {
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const name = urlParams.get('q')
+        console.log(name); 
+        document.getElementById("name").innerHTML = name
+      }
+  
+
   </script>
+
   </body>
 </html>
