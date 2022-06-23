@@ -88,5 +88,20 @@ h1, h2{
     padding-top: px;
 }
 
+h2{
 
+    font-size: 100%;
+}
+
+img{
+    max-width: 40%; 
+    height: auto;
+
+    margin: 20px auto;
+
+}
+
+.button-area{
+
+}
 

@@ -24,7 +24,7 @@
 
         <h1> Artificial Intelligence</h1>
         <h1>Neuromorphic Computing</h1>
-        <h2 style = "display: inline-block"> Hello, </h2> 
+        <h2 style = "display: inline-block"> Hello </h2> 
         <h2 style = "display: inline-block" id="name"></h2>
        
 
@@ -45,6 +45,17 @@
        </form>
      </nav>
 
+    <img id = "img-area" src = "http://www.outgrabe.net/bird00.jpg" alt = "">
+
+    <p>Taken by: </p>
+    
+    <div class = "button-area">
+      <button onclick="AI()">1st bird</button>
+      <button onclick="robot()">2nd bird</button>
+      <button onclick="birdthree()">3rd bird</button>
+      <button onclick="birdfour()">4th bird</button>
+      <button onclick="birdfive()">5th bird</button>
+    </div>
     <!-- Here is our page's main content -->
     <main>
 
@@ -112,7 +123,35 @@
         console.log(name); 
         document.getElementById("name").innerHTML = name
       }
-  
+      
+      var img = document.getElementById("img-area");
+
+      function AI()
+      {
+        img.src = "https://keaeinc.files.wordpress.com/2020/05/savvycom-ai-lab.jpg?w=1200";
+      }
+
+      function birdtwo()
+      {
+        img.src = "https://media.wired.com/photos/5a0e13169639c5682ccdf3b2/125:94/w_1179,h_887,c_limit/Atlas-FinalArt.jpg";
+      }
+
+      function birdtwo()
+      {
+        img.src = "https://media.wired.com/photos/5a0e13169639c5682ccdf3b2/125:94/w_1179,h_887,c_limit/Atlas-FinalArt.jpg";
+      }
+
+      function birdtwo()
+      {
+        img.src = "https://media.wired.com/photos/5a0e13169639c5682ccdf3b2/125:94/w_1179,h_887,c_limit/Atlas-FinalArt.jpg";
+      }
+
+      function birdtwo()
+      {
+        img.src = "https://media.wired.com/photos/5a0e13169639c5682ccdf3b2/125:94/w_1179,h_887,c_limit/Atlas-FinalArt.jpg";
+      }
+
+     
 
   </script>
 
