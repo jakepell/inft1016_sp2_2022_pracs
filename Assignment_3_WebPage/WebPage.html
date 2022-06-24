@@ -40,7 +40,11 @@
 
     <img id = "img-area" src = "https://images.pexels.com/photos/11139552/pexels-photo-11139552.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt = "">
 
-    <p>Taken by: </p>
+    <article>
+      </p>Taken By:</p>
+      <p id = "photographer"> Matt Weissinger </p>
+    </article>
+  
     
     <div class = "button-area">
       <button onclick="selfdriving()">Self-driving Car</button>
@@ -104,59 +108,51 @@
 
     var icon = document.getElementById('icon')
 
-    
-
     window.onload = function getName()
       {
         
         const queryString = window.location.search;
         const urlParams = new URLSearchParams(queryString);
-        const name = urlParams.get('user_name')
+        var name = urlParams.get('user_name');
         console.log(name); 
-        document.getElementById("name").innerHTML = name
-
-        localStorage.setItem('user_name', name.value);
-
-        console.log(localStorage.getItem("value"));
-
-
-
-        if (key && value){
-
-          localStorage.setItem(key,value);
-          location.reload();
-        }
-      
+        document.getElementById("name").innerHTML = name;
 
       }
+
+      localStorage.setItem('user_name', name);
+      user_name = localStorage.getItem(name);
       
       var img = document.getElementById("img-area");
+      document.getElementById("photographer") 
 
-      function selffdriving()
+      function selfdriving()
       {
         img.src = "https://images.pexels.com/photos/11139552/pexels-photo-11139552.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1";
+        document.getElementById("photographer").innerHTML = "Matt Weissinger";
       }
 
       function robot()
       {
         img.src = "https://images.pexels.com/photos/2599244/pexels-photo-2599244.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1";
-        
+        document.getElementById("photographer").innerHTML = "Alex Knight";
       }
 
       function code()
       {
         img.src = "https://images.pexels.com/photos/614117/pexels-photo-614117.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1";
-        
+        document.getElementById("photographer").innerHTML = "Jorge Jesus";
       }
 
       function motherboard()
       {
         img.src = "https://images.pexels.com/photos/1105379/pexels-photo-1105379.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1";
+        document.getElementById("photographer").innerHTML = "Johannes Plenio";
       }
 
       function virtualreality()
       {
         img.src = "https://images.pexels.com/photos/834949/pexels-photo-834949.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1";
+        document.getElementById("photographer").innerHTML = "Andrea Piacquadio";
       }
 
      let darkMode = localStorage.getItem('darkMode');
