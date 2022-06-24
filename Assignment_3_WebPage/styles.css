@@ -83,14 +83,16 @@ input{
     align-items: center;
 }
 
-h1, h2{
+h1, h2, h3{
 
     padding-top: 1px;
+    text-align: center;
 }
 
 h2{
 
     font-size: 100%;
+
 }
 
 img{
@@ -104,11 +106,16 @@ img{
 form{
 
     padding-top: 10px;
+    color: var(--secondary-color);
 
 }
 
 input{
     color: var(--secondary-color);
     
+}
+
+aside{
+    text-align: center;
 }
 
