@@ -17,7 +17,7 @@
   <body>
 
     <div>
-        <button id="icon" onclick="dark_Mode()">Darkmode</button>
+        <button id="icon" class = "darkmode" >Darkmode</button>
     </div>
 
     <header>
@@ -30,31 +30,24 @@
 
     </header>
 
-
-    <nav class="container">
-        <a href="#">Home</a>
-        <a href="#">Our team</a>
-        <a href="#">Projects</a>
-        <a href="#">Contact</a>
-
        <!-- A Search form is another common non-linear way to navigate through a website. -->
     </nav>
        <form>
-         <input type="search" name="q" placeholder="Enter your name">
-         <input type="submit" value="Enter">
+         <input id = "inpKey" type="search" name="user_name" placeholder="Enter your name">
+         <input id = "inpValue" type="submit" value="Enter">
        </form>
      </nav>
 
-    <img id = "img-area" src = "http://www.outgrabe.net/bird00.jpg" alt = "">
+    <img id = "img-area" src = "https://images.pexels.com/photos/11139552/pexels-photo-11139552.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt = "">
 
     <p>Taken by: </p>
     
     <div class = "button-area">
-      <button onclick="AI()">1st bird</button>
-      <button onclick="robot()">2nd bird</button>
-      <button onclick="birdthree()">3rd bird</button>
-      <button onclick="birdfour()">4th bird</button>
-      <button onclick="birdfive()">5th bird</button>
+      <button onclick="selfdriving()">Self-driving Car</button>
+      <button onclick="robot()">Robot</button>
+      <button onclick="code()">Code</button>
+      <button onclick="motherboard()">Motherboard</button>
+      <button onclick="virtualreality()">Virtual Reality</button>
     </div>
     <!-- Here is our page's main content -->
     <main>
@@ -103,7 +96,7 @@
     <!-- And here is our main footer that is used across all the pages of our website -->
 
     <footer>
-      <p>©Copyright 2022 by Jacob Borthwick-Pellissier. All rights reversed.</p>
+      <p>©Copyright 2022 by Jacob Borthwick-Pellissier. All rights reserved.</p>
     </footer>
 
   <script>
@@ -111,47 +104,92 @@
 
     var icon = document.getElementById('icon')
 
-    icon.onclick = function dark_mode(dark){
-      document.body.classList.toggle('dark-theme');
-    }
+    
 
     window.onload = function getName()
       {
+        
         const queryString = window.location.search;
         const urlParams = new URLSearchParams(queryString);
-        const name = urlParams.get('q')
+        const name = urlParams.get('user_name')
         console.log(name); 
         document.getElementById("name").innerHTML = name
+
+        localStorage.setItem('user_name', name.value);
+
+        console.log(localStorage.getItem("value"));
+
+
+
+        if (key && value){
+
+          localStorage.setItem(key,value);
+          location.reload();
+        }
+      
+
       }
       
       var img = document.getElementById("img-area");
 
-      function AI()
+      function selffdriving()
       {
-        img.src = "https://keaeinc.files.wordpress.com/2020/05/savvycom-ai-lab.jpg?w=1200";
+        img.src = "https://images.pexels.com/photos/11139552/pexels-photo-11139552.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1";
       }
 
-      function birdtwo()
+      function robot()
       {
-        img.src = "https://media.wired.com/photos/5a0e13169639c5682ccdf3b2/125:94/w_1179,h_887,c_limit/Atlas-FinalArt.jpg";
+        img.src = "https://images.pexels.com/photos/2599244/pexels-photo-2599244.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1";
+        
       }
 
-      function birdtwo()
+      function code()
       {
-        img.src = "https://media.wired.com/photos/5a0e13169639c5682ccdf3b2/125:94/w_1179,h_887,c_limit/Atlas-FinalArt.jpg";
+        img.src = "https://images.pexels.com/photos/614117/pexels-photo-614117.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1";
+        
       }
 
-      function birdtwo()
+      function motherboard()
       {
-        img.src = "https://media.wired.com/photos/5a0e13169639c5682ccdf3b2/125:94/w_1179,h_887,c_limit/Atlas-FinalArt.jpg";
+        img.src = "https://images.pexels.com/photos/1105379/pexels-photo-1105379.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1";
       }
 
-      function birdtwo()
+      function virtualreality()
       {
-        img.src = "https://media.wired.com/photos/5a0e13169639c5682ccdf3b2/125:94/w_1179,h_887,c_limit/Atlas-FinalArt.jpg";
+        img.src = "https://images.pexels.com/photos/834949/pexels-photo-834949.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1";
       }
 
-     
+     let darkMode = localStorage.getItem('darkMode');
+     const darkModeToggle = document.querySelector("#icon")
+
+     const enableDarkMode = () => {
+
+      document.body.classList.add('darkmode');
+      localStorage.setItem("darkMode", "enabled");
+      document.body.classList.toggle('dark-theme');
+
+     }
+
+     const disableDarkMode = () => {
+
+      document.body.classList.remove('darkmode');
+      localStorage.setItem("darkMode", null);
+      document.body.classList.toggle('dark-theme');
+
+    }
+
+    if (darkMode == 'enabled'){
+      enableDarkMode();
+    }
+
+     darkModeToggle.addEventListener("click", () => {
+      darkMode = localStorage.getItem("darkMode")
+      if (darkMode != 'enabled') {
+      enableDarkMode();
+     } else {
+      disableDarkMode();
+     }
+     })
 
   </script>
 

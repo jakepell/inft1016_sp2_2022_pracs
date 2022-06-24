@@ -85,7 +85,7 @@ input{
 
 h1, h2{
 
-    padding-top: px;
+    padding-top: 1px;
 }
 
 h2{
@@ -103,5 +103,16 @@ img{
 
 .button-area{
 
+}
+
+form{
+
+    padding-top: 10px;
+
+}
+
+input{
+    color: var(--secondary-color);
+    
 }
 
